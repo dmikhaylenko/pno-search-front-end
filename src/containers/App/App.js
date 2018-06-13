@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
+import PageWrapper from "../PageWrapper/PageWrapper"
 class App extends Component {
   render() {
     return (
-      <div className="App">App Container</div>
+      <PageWrapper title="TITLE">CONTENT</PageWrapper>
     );
   }
 }
