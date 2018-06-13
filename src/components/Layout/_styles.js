@@ -10,7 +10,7 @@ export default withStyle({
         position: "fixed"
     },
     content: {
-        marginTop: ({top}) => {
+        paddingTop: ({top}) => {
             return `${top || 0}px`
         }
     },

@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import provideClientRefs from "../../common/provideClientRect"
-import {Layout, Header, Content} from "../../components/Layout"
+import {Header} from "../../components/Header"
+import {Layout, Header as LayoutHeader, Content as LayoutContent} from "../../components/Layout"
 
 class PageWrapper extends Component {
     state = {
@@ -21,12 +22,12 @@ class PageWrapper extends Component {
 
         return provideClientRefs(this.state._domElement, (rect) => {
             return (<Layout>
-                <Header domRef={this.domRef}>
-                    
-                </Header>
-                <Content top={rect.height}>
+                <LayoutHeader domRef={this.domRef}>
+                    <Header bgColor="primary" textColor="primary" title={title}/>
+                </LayoutHeader>
+                <LayoutContent top={rect.height}>
                     {children}
-                </Content>
+                </LayoutContent>
             </Layout>)
         })
         
