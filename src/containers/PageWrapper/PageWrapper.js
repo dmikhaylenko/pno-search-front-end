@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import provideClientRefs from "../../common/provideClientRect"
-import {Header} from "../../components/Header"
+import {Header} from "../Header"
 import {Layout, Header as LayoutHeader, Content as LayoutContent} from "../../components/Layout"
 
 class PageWrapper extends Component {
