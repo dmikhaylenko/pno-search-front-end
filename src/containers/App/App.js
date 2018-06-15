@@ -3,6 +3,7 @@ import PageWrapper from "../PageWrapper/PageWrapper"
 import {ThemeProvider} from "react-jss"
 import {Button} from "../../components/Button"
 import {List, Item} from "../../components/List"
+import dateFormat from "dateformat"
 
 import {Question} from "../../components/Question"
 
@@ -913,7 +914,10 @@ const JSON = [
 
 const THEME = {
   bg: {
-      primary: "#5c73c3"
+      primary: "#5c73c3",
+      lightPrimary: "#6987e5",
+      secondary: "#FFFFFF",
+
   },
   text: {
       primary: "#FFFFFF"
@@ -924,15 +928,16 @@ class App extends Component {
     render() {
         return (
             <ThemeProvider theme={THEME}>
-                <PageWrapper title="Searchstack">
+                <PageWrapper title="#Searchstack">
                     <List>
                         {JSON.map((question) => {
+                            const date = new Date(question.created * 1000);
                             return (<Item id={question.id} key={question.id}>
-                                      <Question 
+                                      <Question
                                           title={question.title}
                                           user={question.userName}
                                           isAnswered={question.isAnswered}
-                                          // date={new Date(question.created * 1000)}
+                                          date={dateFormat(date, "dd.mm.yyyy")}
                                           avatar={question.imageUrl}
                                       />
                                 </Item>)

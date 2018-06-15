@@ -15,13 +15,13 @@ const Question = ({title, avatar, user, date, classes}) => {
                 <article className={classes.questionUserName}>
                     <Text size="1em" weight="medium" style="italic">{user}</Text>
                 </article>
-                <article className={classes.questionPostedDate}>
-                    <Text size="0.75em" weight="regular" style="italic">{date}</Text>
-                </article>
             </section>
             <section className={classes.questionInfo}>
-                <article>
-                    <Text size="1.25em" weight="black">{title}</Text>
+                <article className={classes.questionInfoTitle}>
+                    <Text size="1.25em" weight="black" style="italic">{title}</Text>
+                </article>
+                <article className={classes.questionPostedDate}>
+                    <Text size="1em" weight="regular" style="italic">Posted {date}</Text>
                 </article>
             </section>
         </section>)

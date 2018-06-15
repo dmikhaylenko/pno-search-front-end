@@ -11,7 +11,7 @@ import {Search} from "../../components/Icons/index"
 const Header = ({title, textColor, classes, onInputRef, onSearchClick, onSearchInputChange, onSearchInputBlur}) => {
     return (<section className={classes.header}>
         <article className={classes.logo}>
-            <Button href="#" textColor={textColor}>
+            <Button href="/" textColor={textColor}>
                 <Text weight="medium" size="1.25em">{title}</Text>
             </Button>
         </article>

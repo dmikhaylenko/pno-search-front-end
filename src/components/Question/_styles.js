@@ -9,7 +9,7 @@ export default withStyle(({bg, text}) => {
         question: {
             padding: "18px",
             display: "flex",
-            flexFlow: "row nowrap"
+            flexFlow: "row nowrap",
         },
         questionUserAvatar: {
             margin: 0,
@@ -33,6 +33,13 @@ export default withStyle(({bg, text}) => {
         questionInfo: {
             flex: "1 1 auto",
             padding: "8px 0 8px 18px"
+        },
+        questionInfoTitle: {
+
+        },
+        questionPostedDate: {
+            padding: "16px 0 0 0",
+            whiteSpace: "nowrap"
         }
     }
 })
