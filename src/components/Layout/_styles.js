@@ -1,5 +1,9 @@
 import withStyle from "react-jss"
 
+/**
+ * HOC: Component styles
+ * @author Dmitry Mikhaylenko
+ */
 export default withStyle({
     layout: {
         height: "100%"

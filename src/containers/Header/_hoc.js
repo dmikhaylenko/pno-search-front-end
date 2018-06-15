@@ -1,5 +1,10 @@
 import {compose, withState, withHandlers, lifecycle, mapProps} from "recompose"
 
+/**
+ * HOC: Search form logic implementation. This component
+ * handle internal state on focus/blur and change input field.
+ * @author Dmitry Mikhaylenko
+ */
 export default compose(
     withState("state", "setState", {
         _searchFieldRef: null,

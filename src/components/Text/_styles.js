@@ -1,6 +1,9 @@
 import withStyle from "react-jss"
 import getColor from "../../common/getColor"
 
+/**
+ * Text weights map
+ */
 const WEIGHTS = {
     thin: 100,
     light: 300,
@@ -10,8 +13,15 @@ const WEIGHTS = {
     black: 900
 }
 
+/**
+ * Possible text styles
+ */
 const STYLES = ["normal", "italic"]
 
+/**
+ * HOC: Component styles
+ * @author Dmitry Mikhaylenko
+ */
 export default withStyle(({text: textTheme}) => {
     return {
         text: {

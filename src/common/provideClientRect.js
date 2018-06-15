@@ -1,3 +1,9 @@
+/**
+ * Function get DOM client rect and provide it into callback. If element is
+ * null client rect struct with  will be provided.
+ * @param {Element} element DOM element
+ * @param {Function} callback callback function which uses provided DOM client rect
+ */
 export default function (element, callback) {
     const rect = element ? element.getBoundingClientRect() : {
         top: 0,

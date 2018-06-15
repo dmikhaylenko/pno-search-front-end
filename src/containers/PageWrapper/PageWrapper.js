@@ -3,6 +3,11 @@ import provideClientRefs from "../../common/provideClientRect"
 import {Header} from "../Header"
 import {Layout, Header as LayoutHeader, Content as LayoutContent} from "../../components/Layout"
 
+/**
+ * Page wrapper container. This component encapsulates page layout,
+ * and header. 
+ * @author Dmitry Mikhaylenko
+ */
 class PageWrapper extends Component {
     state = {
         _domElement: null
