@@ -1,7 +1,7 @@
 import React from "react";
-import {Text} from "../Text"
-import {Avatar} from "../Avatar"
-import {Button} from "../Button"
+import {Text} from "../Text/index"
+import {Avatar} from "../Avatar/index"
+import {Button} from "../Button/index"
 
 /**
  * Question functional component
