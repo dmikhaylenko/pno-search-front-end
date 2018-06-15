@@ -11,7 +11,8 @@ export default withStyle({
     header: {
         top: 0,
         width: "100%",
-        position: "fixed"
+        position: "fixed",
+        zIndex: 100
     },
     content: {
         paddingTop: ({top}) => {

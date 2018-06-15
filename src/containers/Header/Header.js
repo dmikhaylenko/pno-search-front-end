@@ -12,7 +12,7 @@ const Header = ({title, textColor, classes, onInputRef, onSearchClick, onSearchI
     return (<section className={classes.header}>
         <article className={classes.logo}>
             <Button href="#" textColor={textColor}>
-                <Text weight="medium">{title}</Text>
+                <Text weight="medium" size="1.25em">{title}</Text>
             </Button>
         </article>
         <article className={classes.search}>
@@ -20,7 +20,7 @@ const Header = ({title, textColor, classes, onInputRef, onSearchClick, onSearchI
                 <Search className={classes.searchIcon}/>
             </Button>
         </article>
-        <form className={classes.searchForm}>
+        <form className={classes.searchForm} onSubmit={event => {event.preventDefault()}}>
             <input ref={onInputRef} type="text" onBlur={onSearchInputBlur} onChange={onSearchInputChange}
                    className={classes.searchInput}/>
         </form>
