@@ -14,7 +14,7 @@ export default withStyle(({bg, text}) => {
                 textDecoration: "none",
                 WebkitTapHighlightColor: "transparent",
                 color: ({textColor: propsTextColor}) => {
-                    return getColor(text, propsTextColor, "initial")
+                    return getColor(text, propsTextColor, "inherit")
                 },
                 backgroundColor: ({bgColor}) => {
                     return getColor(bg, bgColor, "transparent")

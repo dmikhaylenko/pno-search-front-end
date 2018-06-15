@@ -1,11 +1,12 @@
 import React from "react";
 import omit from "lodash/omit";
+import cNames from "classnames"
+
 /**
  * Prop names which should be filtered
  */
 const CUSTOM_PROPS = [
-    "theme", "classes", "bgColor", "textColor",
-
+    "theme", "classes", "bgColor", "textColor", "classNames"
 ]
 
 /**
@@ -15,15 +16,15 @@ const CUSTOM_PROPS = [
  */
 const Button = (props) => {
     const {
-        classes
+        classes,
+        classNames
     } = props;
 
     const tag = !("href" in props)
         ? "button"
         : "a";
-
     return React.createElement(tag, {...omit(props, CUSTOM_PROPS),
-        className: classes.button
+        className: cNames(classes.button, classNames)
     })
 }
 

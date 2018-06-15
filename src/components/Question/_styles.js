@@ -1,4 +1,5 @@
 import withStyle from "react-jss"
+import getColor from "../../common/getColor"
 
 /**
  * HOC: Component styles
@@ -10,6 +11,10 @@ export default withStyle(({bg, text}) => {
             padding: "18px",
             display: "flex",
             flexFlow: "row nowrap",
+            opacity: ({isAnswered}) => isAnswered ? 1 : 0.65,
+            backgroundColor: ({isAnswered}) => isAnswered
+                ? getColor(bg, "answeredQuestion", "transparent")
+                : getColor(bg, "unansweredQuestion", "transparent")
         },
         questionUserAvatar: {
             margin: 0,
@@ -21,7 +26,6 @@ export default withStyle(({bg, text}) => {
             flexFlow: "column nowrap",
             whiteSpace: "nowrap",
             overflow: "hidden"
-            
         },
         questionUserName: {
             width: "100%",
@@ -36,6 +40,14 @@ export default withStyle(({bg, text}) => {
         },
         questionInfoTitle: {
 
+        },
+        questionInfoTitleLink: {
+            textDecoration: "none",
+            "@media (hover)": {
+                "&:hover": {
+                    textDecoration: "underline"
+                }
+            }
         },
         questionPostedDate: {
             padding: "16px 0 0 0",

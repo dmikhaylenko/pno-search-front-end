@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import provideClientRefs from "../../common/provideClientRect"
 import {Header} from "../Header"
+import {Content} from "../../components/Content"
 import {Layout, Header as LayoutHeader, Content as LayoutContent} from "../../components/Layout"
 
 /**
@@ -31,7 +32,9 @@ class PageWrapper extends Component {
                     <Header bgColor="primary" textColor="primary" title={title}/>
                 </LayoutHeader>
                 <LayoutContent top={rect.height}>
-                    {children}
+                    <Content bgColor="secondary" textColor="inversePrimary">
+                        {children}
+                    </Content>
                 </LayoutContent>
             </Layout>)
         })

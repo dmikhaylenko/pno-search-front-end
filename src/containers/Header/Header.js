@@ -12,7 +12,7 @@ const Header = ({title, textColor, classes, onInputRef, onSearchClick, onSearchI
     return (<section className={classes.header}>
         <article className={classes.logo}>
             <Button href="/" textColor={textColor}>
-                <Text weight="medium" size="1.25em">{title}</Text>
+                <Text textWeight="medium" size="1.25em">{title}</Text>
             </Button>
         </article>
         <article className={classes.search}>

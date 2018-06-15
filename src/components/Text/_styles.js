@@ -25,11 +25,10 @@ const STYLES = ["normal", "italic"]
 export default withStyle(({text: textTheme}) => {
     return {
         text: {
-            color: "inherit",
             fontFamily: "Roboto",
             fontSize: ({size}) => size || "1em",
-            fontStyle: ({style}) => STYLES.indexOf(style) > 0 ? style : "normal",
-            fontWeight: ({weight}) => weight in WEIGHTS ? WEIGHTS[weight] : 100,
+            fontStyle: ({textStyle}) => STYLES.indexOf(textStyle) > 0 ? textStyle : "normal",
+            fontWeight: ({textWeight}) => textWeight in WEIGHTS ? WEIGHTS[textWeight] : 100,
             color: ({textColor}) => {
                 return getColor(textTheme, textColor, "inherit")
             }
