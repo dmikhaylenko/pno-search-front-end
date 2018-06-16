@@ -25,6 +25,7 @@ const Question = ({title, avatar, user, date, reference, classes}) => {
                     <article className={classes.questionPostedDate}>
                         <Text textColor="secondary" size="1em" textWeight="regular" textStyle="italic">Posted {date}</Text>
                     </article>
+
                 </section>
             </section>)
 }

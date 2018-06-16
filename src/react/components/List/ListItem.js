@@ -1,7 +1,7 @@
 import React from "react"
 
 /**
- * ListItem functional component
+ * List item functional component
  * @param {Object} props 
  * @author Dmitry Mikhaylenko
  */

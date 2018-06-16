@@ -1,5 +1,5 @@
 import withStyle from "react-jss"
-import getColor from "../../common/getColor"
+import getColor from "../../../common/getColor"
 
 /**
  * Text weights map

@@ -4,7 +4,7 @@ import withStyle from "react-jss"
  * HOC: Component styles
  * @author Dmitry Mikhaylenko
  */
-export default withStyle(({bg, text}) => {
+export default withStyle(() => {
     return {
         list: {
             margin: 0,
