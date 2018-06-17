@@ -8,6 +8,7 @@ import getColor from "../../../common/getColor"
 export default withStyle(({bg}) => {
     return {
         loadMore: {
+            position: "relative",
             padding:  "10px 24px",
             backgroundColor: () => getColor(bg, "secondaryDark", "transparent"),
             display: ({show}) => show ? "block" : "none"

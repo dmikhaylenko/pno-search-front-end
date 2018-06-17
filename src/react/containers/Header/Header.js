@@ -20,10 +20,10 @@ const Header = ({title, textColor, classes, onInputRef, onSearchClick, onSearchI
                 <Search className={classes.searchIcon}/>
             </Button>
         </article>
-        <form className={classes.searchForm} onSubmit={event => {event.preventDefault()}}>
+        <article className={classes.searchForm}>
             <input ref={onInputRef} type="text" onBlur={onSearchInputBlur} onChange={onSearchInputChange}
                    className={classes.searchInput}/>
-        </form>
+        </article>
     </section>)
 }
 

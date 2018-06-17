@@ -1,37 +1,26 @@
 import "./index.css";
 import "typeface-roboto";
-
 import config from "./config"
 import ReactDOM from "react-dom"
-
-import createClient from "./client"
 import React, {Fragment} from "react"
 import {Provider, connect} from "react-redux"
 import HomePage from "./react/pages/Home/Home"
 import createActionCreators from "./redux/actions"
 import {createStore, applyMiddleware} from "redux"
 import {composeWithDevTools} from "redux-devtools-extension"
-import promiseMiddleware from "./redux/middlewares/promiseMiddleware"
+import apiCallMiddleware from "./redux/middlewares/apiCallMiddleware"
 
 
 
 import reducer from "./redux/reducers"
 
-const {
-    host,
-    port,
-    protocol,
-} = config;
-
 const store = createStore(reducer,
     composeWithDevTools(
-        applyMiddleware(promiseMiddleware)
+        applyMiddleware(apiCallMiddleware)
     )
 );
 
-const actionCreatorsMapper = createActionCreators(
-    createClient(protocol, host, port)
-);
+const actionCreatorsMapper = createActionCreators(config);
 
 const statePropertiesMapper = (state) => {
     return {

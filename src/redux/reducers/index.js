@@ -1,9 +1,15 @@
+import {combineReducers} from "redux"
+import questions from "./questionsReducer"
+import hasMore from "./hasMoreReducer"
+import isLoadingProgress from "./isLoadingProgressReducer"
+import isSearchingProgress from "./isSearchProgressReducer"
+
 /**
  * Root reducer
- * @param state current state
- * @param action reducer action
- * @returns {Object} next state
  */
-export default (state, action) => {
-    return state;
-}
+export default combineReducers({
+    isSearchingProgress,
+    isLoadingProgress,
+    questions ,
+    hasMore
+})

@@ -2,7 +2,7 @@ import withStyle from "react-jss"
 import getColor from "../../../common/getColor"
 
 /**
- * Text weights map
+ * Progress weights map
  */
 const WEIGHTS = {
     thin: 100,

@@ -9,7 +9,8 @@ export default compose(
     withState("state", "setState", {
         _searchFieldRef: null,
         searchQuery: "",
-        showSearchForm: false
+        showSearchForm: false,
+        searchInputIsFocused: false
     }),
     withHandlers({
         onInputRef: ({state, setState}) => (element) => {
@@ -21,7 +22,8 @@ export default compose(
             event.stopPropagation()
             if (!state.showSearchForm) {
                 setState({...state,
-                    showSearchForm: true
+                    showSearchForm: true,
+                    searchInputIsFocused: true
                 })
             }
         },
@@ -33,10 +35,12 @@ export default compose(
             onSearchInput && onSearchInput(searchQuery);
             event.stopPropagation()
         },
-        onSearchInputBlur: ({state, setState}) => () => {
+        onSearchInputBlur: ({state, setState}) => (event) => {
+            event.target.blur()
             if (state.showSearchForm) {
                 setState({...state,
-                    showSearchForm: !!state.searchQuery.trim().length
+                    showSearchForm: !!state.searchQuery.trim().length,
+                    searchInputIsFocused: false
                 })
             }
         }
@@ -45,10 +49,15 @@ export default compose(
         componentDidUpdate() {
             const {
                 state: {
-                    _searchFieldRef
+                    searchInputIsFocused,
+                    _searchFieldRef,
+                    showSearchForm,
                 }
             } = this.props;
-            _searchFieldRef && _searchFieldRef.focus();
+
+            if (showSearchForm && searchInputIsFocused) {
+                _searchFieldRef && _searchFieldRef.focus();
+            }
         }
     }),
     mapProps((props) => {

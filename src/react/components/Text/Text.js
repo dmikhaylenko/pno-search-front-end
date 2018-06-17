@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * Text functional component
+ * Progress functional component
  * @param {Object} props component properties
  * @author Dmitry Mikhaylenko
  */
