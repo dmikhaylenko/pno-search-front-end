@@ -8,6 +8,9 @@ import {Text} from "../../components/Text";
 import {Progress} from "../../components/Progress";
 import {Message} from "../../components/Message";
 
+/**
+ * HOME PAGE COMPONENT
+ */
 export default class extends PureComponent {
     constructor(props) {
         super(props)
